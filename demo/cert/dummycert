@@ -1,0 +1,4 @@
+# generate key and CSR
+openssl req -nodes -newkey rsa:1024 -keyout dummy.key -out dummy.csr -subj "/C=CH/ST=AState/L=ACity/O=Dummy Inc/OU=IT Dept/CN=ssl.dummy.org"
+# generate self-signed cert
+openssl x509 -req -days 365 -in dummy.csr -signkey dummy.key -out dummy.crt

@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  pil-demo:
+    container_name: pil-demo
+    hostname: pil-demo
+    image: dbertolotto/picolisp/demo:0.0.1
+    ports:
+      - 8080:8000
